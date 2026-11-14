@@ -34,8 +34,10 @@ a{color:#D73F09;font-weight:700}a:hover{color:#A8320A}
 <img src="" data-farm alt="Red barn and green fields below a snow-capped mountain" style="display:block;width:100%;height:160px;object-fit:cover;border:2px solid #2B2B2B;border-radius:10px;box-sizing:border-box;margin-top:12px">
 <div style="font-size:32px;font-weight:700;text-align:center">AgRoutes</div>
 <div style="text-align:center;color:#4A4A4A;font-size:15px">Shared deliveries for small farms &amp; food hubs<br>Clickable prototype</div>
-<a class="storycard" href="#s1-Main"><b>User Story 1 · Sign up and find a trip partner</b><span>Ross, a Corvallis farmer, hears there's a better way to share delivery costs, checks out AgRoutes, and finds a ride to share.</span><em>Start ›</em></a>
-<a class="storycard" href="#s2-Main"><b>User Story 2 · Accept a first partner</b><span>Dana replies, and Ross accepts his first shared ride.</span><em>Start ›</em></a>
+<div class="storycard"><b>User Stories 1 &amp; 2 · Sign up and accept a first partner</b><span>Ross signs up, finds a ride to share, and accepts his first shared run.</span><em><a href="#s1-Main" style="color: #D73F09">Story 1 ›</a> &nbsp;&nbsp; <a href="#s2-Main" style="color: #D73F09">Story 2 ›</a></em></div>
+
+<a class="storycard" href="#us3-Search"><b>User Story 3 · Find a trip with the same start &amp; end</b><span>A Jacksonville farmer has products to send to Medford and finds trips that start and end near hers.</span><em>Start ›</em></a>
+<a class="storycard" href="#us4-Search"><b>User Story 4 · Find a ride along the way</b><span>The same farmer also sees trips that pass by on their way, like a run from Applegate to Ashland.</span><em>Start ›</em></a>
 <div class="legend"><span class="hatch"></span> Hatched items not live</div>
 </div></section>
 <section class="screen" id="s1-Main" hidden>
@@ -2033,8 +2035,416 @@ Show trips</a>
 </nav>
 </div>
 </section>
+<section class="screen" id="us3-Search" hidden>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; color: #2B2B2B; font-family: 'Balsamiq Sans', 'Comic Sans MS', sans-serif">
+<div style="flex: 1; min-height: 0; padding: 8px 24px 8px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto">
+<div style="display: grid; grid-template-columns: 80px 1fr 80px; align-items: center; min-height: 44px">
+<a href="#start" style="display: flex; align-items: center; min-height: 44px; font-size: 16px">‹ Home</a>
+<div style="font-size: 30px; font-weight: 700; text-align: center">AgRoutes</div>
+<div style="position: relative; display: flex; justify-content: flex-end">
+<a href="#" aria-label="Your profile" style="display: block; width: 44px; height: 44px; border: 2px solid #2B2B2B; border-radius: 22px; box-sizing: border-box; overflow: hidden"><img src="" data-farm alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 35% 70%"></a>
 </div>
-<div class="bar"><a href="#start">↺ All stories</a><a href="#s1-Main">Story 1</a><a href="#s2-Main">Story 2</a></div>
+</div>
+<h1 style="margin: -2px 0 0; font-size: 20px; font-weight: 700; line-height: 1.2">Find a trip</h1>
+<div role="group" aria-label="What are you doing?" style="display: grid; grid-template-columns: 1fr 1fr; border: 2px solid #2B2B2B; border-radius: 12px; overflow: hidden">
+<div aria-current="true" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5px 4px; background: #2B2B2B; color: #FFFFFF"><span style="font-size: 14px; font-weight: 700">Find space</span><span style="font-size: 11px">I have products to send</span></div>
+<div title="Not live in this prototype" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5px 4px; border-left: 2px solid #2B2B2B; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)"><span style="font-size: 14px; font-weight: 700">Offer space</span><span style="font-size: 11px">I have space on my run</span></div>
+</div>
+<div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Trips that start and end near yours.</div>
+<div style="display: flex; align-items: center; gap: 8px">
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; height: 44px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; overflow: hidden"><label for="us3-Search-from" style="flex-shrink: 0; width: 52px; padding-left: 10px; font-size: 15px; font-weight: 700">From</label><input id="us3-Search-from" type="text" list="p2-Search-place-list" value="Jacksonville (my farm)" autocomplete="off" style="flex: 1; min-width: 0; height: 100%; border: none; outline: none; padding: 0 8px 0 0; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
+<div style="display: flex; align-items: center; height: 44px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; overflow: hidden"><label for="us3-Search-to" style="flex-shrink: 0; width: 52px; padding-left: 10px; font-size: 15px; font-weight: 700">To</label><input id="us3-Search-to" type="text" list="p2-Search-place-list" value="Medford" autocomplete="off" style="flex: 1; min-width: 0; height: 100%; border: none; outline: none; padding: 0 8px 0 0; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
+</div>
+<button aria-label="Swap From and To" title="Swap, to find return runs and backhauls" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; padding: 0; border: 2px solid #2B2B2B; border-radius: 22px; background: #FFFFFF; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#D73F09" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4v16M4 8l4-4 4 4M16 20V4M12 16l4 4 4-4"></path></svg></button>
+</div>
+<datalist id="p2-Search-place-list" data-dup="us3-Search">
+<option value="Jacksonville (my farm)"></option><option value="Applegate"></option><option value="Grants Pass"></option><option value="Medford"></option><option value="Ashland"></option><option value="Roseburg"></option><option value="Cottage Grove"></option><option value="Eugene"></option>
+</datalist>
+<div style="display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="us3-Search-when" style="font-size: 15px; font-weight: 700">Date</label><input id="us3-Search-when" type="date" value="2026-11-18" style="height: 44px; min-width: 0; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; padding: 0 8px; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="us3-Search-within" style="font-size: 15px; font-weight: 700">Within</label><select id="us3-Search-within" style="height: 44px; min-width: 0; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; padding: 0 8px; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"><option value="5" selected>5 mi</option><option value="10">10 mi</option></select></div>
+</div>
+
+<div style="display: flex; flex-direction: column"><div style="display: flex; justify-content: space-between; font-size: 14px"><span>Cost without sharing:</span><span style="font-weight: 700">about $5</span></div><div style="font-size: 12px; color: #4A4A4A">6 mi one way · IRS rate, 76¢/mi</div></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<label style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; font-size: 15px; font-weight: 700"><input id="us3-fridge" class="p2-fridge" type="checkbox" style="width: 22px; height: 22px; margin: 0; accent-color: #1A9E2A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg>Refrigerated</label>
+<label title="Not live in this prototype" style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; border: 2px solid #6E6E6E; border-radius: 10px; box-sizing: border-box; font-size: 15px; font-weight: 700; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px); cursor: default"><input type="checkbox" disabled style="width: 22px; height: 22px; margin: 0"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#6E6E6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M5 20c0-9 6-15 15-15 0 9-6 15-15 15z"></path><path d="M5 20l9-9"></path></svg>Organic</label>
+</div>
+<div style="font-size: 13px; font-weight: 700; color: #4A3200; text-align: center">*All final terms are up to the farmers' mutual agreement. AgRoutes plays no role.</div>
+<a href="#us3-Results" style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-shrink: 0; height: 52px; margin-top: auto; border: 2px solid #2B2B2B; border-radius: 26px; box-sizing: border-box; background-color: #1A9E2A; color: #FFFFFF; font-size: 19px; font-weight: 700; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>Show trips</a>
+</div>
+<nav aria-label="Main" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid #2B2B2B; padding: 4px 8px 10px">
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Home</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; color: #D73F09; font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px">Trips</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Messages</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Profile</a>
+</nav>
+</div>
+</section>
+<section class="screen" id="us3-Results" hidden>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; color: #2B2B2B; font-family: 'Balsamiq Sans', 'Comic Sans MS', sans-serif">
+<div style="flex: 1; min-height: 0; padding: 8px 24px 8px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto">
+<div style="display: grid; grid-template-columns: 80px 1fr 80px; align-items: center; min-height: 44px">
+<a href="#us3-Search" style="display: flex; align-items: center; min-height: 44px; font-size: 16px">‹ Search</a>
+<div style="font-size: 30px; font-weight: 700; text-align: center">AgRoutes</div>
+<div style="position: relative; display: flex; justify-content: flex-end">
+<a href="#" aria-label="Your profile" style="display: block; width: 44px; height: 44px; border: 2px solid #2B2B2B; border-radius: 22px; box-sizing: border-box; overflow: hidden"><img src="" data-farm alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 35% 70%"></a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h1 style="margin: -2px 0 0; font-size: 20px; font-weight: 700; line-height: 1.2">Trips to Medford</h1>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="p2-sub" style="font-size: 14px; color: #4A4A4A">Jacksonville → Medford · Wed, Nov 18 · within <span class=p2-range>5</span> mi · <span class=p2-count>2 trips</span></div><a href="#us3-Search" style="font-size: 14px">Edit</a></div>
+</div>
+<div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Trips that start and end near yours.</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div class="p2-card" data-fridge="no" data-reach="0" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1; font-size: 16px; font-weight: 700">Cedar Hill Farm</div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 12 trips</div></div>
+<div style="font-size: 15px">Jacksonville → Medford</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>Wed, Nov 18 · 8 AM · Pallet space</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as yours</div><div style="font-size: 13px; color: #4A4A4A">Their run: 6 mi · about $5 at 76¢/mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Shared costs</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi from their start (Jacksonville)</li><li style="margin: 2px 0">Drop-off: 0.0 mi from their end (Medford)</li><li style="margin: 2px 0">Both within 5 mi → match</li><li style="margin: 2px 0">No route needed: straight-line distance only</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1; font-size: 16px; font-weight: 700">Woodland Orchard</div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 9 trips</div></div>
+<div style="font-size: 15px">Jacksonville → Medford</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>Wed, Nov 18 · 10 AM · A few boxes</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as yours</div><div style="font-size: 13px; color: #4A4A4A">Their run: 6 mi · about $5 at 76¢/mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Trade a run</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi from their start (Jacksonville)</li><li style="margin: 2px 0">Drop-off: 0.0 mi from their end (Medford)</li><li style="margin: 2px 0">Both within 5 mi → match</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="no" data-reach="11" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1; font-size: 16px; font-weight: 700">Upper Applegate Farm</div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 5 trips</div></div>
+<div style="font-size: 15px">Applegate → Medford</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>Wed, Nov 18 · 7 AM · Half truck free</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Starts 11 mi from you</div><div style="font-size: 13px; color: #4A4A4A">Ends in Medford · their run: 21 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 11 mi from their start (Applegate)</li><li style="margin: 2px 0">Drop-off: 0.0 mi from their end (Medford)</li><li style="margin: 2px 0">Matches at a 20 mi range</li><li style="margin: 2px 0">The range can’t tell whether their route passes you</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="yes" data-reach="12" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1; font-size: 16px; font-weight: 700">Little Applegate Farm</div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 7 trips</div></div>
+<div style="font-size: 15px">Applegate → Ashland</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>Wed, Nov 18 · 7 AM · Half truck free</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Starts 11 mi away, ends 12 mi past Medford</div><div style="font-size: 13px; color: #4A4A4A">Their run: 34 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 11 mi from their start (Applegate)</li><li style="margin: 2px 0">Drop-off: 12 mi from their end (Ashland)</li><li style="margin: 2px 0">Matches at a 20 mi range</li><li style="margin: 2px 0">The range can’t tell whether their route passes you</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="yes" data-reach="14" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1; font-size: 16px; font-weight: 700">Sunny Slope Farm</div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 3 trips</div></div>
+<div style="font-size: 15px">Provolt → Medford</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>Wed, Nov 18 · 9 AM · A few boxes</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Starts 14 mi from you</div><div style="font-size: 13px; color: #4A4A4A">Ends in Medford · their run: 25 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 14 mi from their start (Provolt)</li><li style="margin: 2px 0">Drop-off: 0.0 mi from their end (Medford)</li><li style="margin: 2px 0">Matches at a 20 mi range</li><li style="margin: 2px 0">The range can’t tell whether their route passes you</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="no" data-reach="16" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1; font-size: 16px; font-weight: 700">Panther Gulch Farm</div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 4 trips</div></div>
+<div style="font-size: 15px">Williams → Medford</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>Wed, Nov 18 · 6 AM · Pallet space</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Starts 16 mi from you</div><div style="font-size: 13px; color: #4A4A4A">Ends in Medford · their run: 31 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 16 mi from their start (Williams)</li><li style="margin: 2px 0">Drop-off: 0.0 mi from their end (Medford)</li><li style="margin: 2px 0">Matches once the range is 20 mi</li><li style="margin: 2px 0">The range can’t tell whether their route passes you</li></ul>
+</details>
+</div>
+<div class="p2-empty" hidden style="padding: 14px 12px; border: 2px dashed #6E6E6E; border-radius: 12px; font-size: 14px; line-height: 1.4; color: #4A4A4A; text-align: center">No trips match. Try a wider range.</div>
+</div>
+<div style="margin-top: auto; font-size: 12px; color: #4A4A4A; text-align: center">Same start &amp; end.</div>
+</div>
+<nav aria-label="Main" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid #2B2B2B; padding: 4px 8px 10px">
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Home</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; color: #D73F09; font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px">Trips</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Messages</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Profile</a>
+</nav>
+</div>
+</section>
+<section class="screen" id="us4-Search" hidden>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; color: #2B2B2B; font-family: 'Balsamiq Sans', 'Comic Sans MS', sans-serif">
+<div style="flex: 1; min-height: 0; padding: 8px 24px 8px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto">
+<div style="display: grid; grid-template-columns: 80px 1fr 80px; align-items: center; min-height: 44px">
+<a href="#start" style="display: flex; align-items: center; min-height: 44px; font-size: 16px">‹ Home</a>
+<div style="font-size: 30px; font-weight: 700; text-align: center">AgRoutes</div>
+<div style="position: relative; display: flex; justify-content: flex-end">
+<a href="#" aria-label="Your profile" style="display: block; width: 44px; height: 44px; border: 2px solid #2B2B2B; border-radius: 22px; box-sizing: border-box; overflow: hidden"><img src="" data-farm alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 35% 70%"></a>
+</div>
+</div>
+<h1 style="margin: -2px 0 0; font-size: 20px; font-weight: 700; line-height: 1.2">Find a ride along the way</h1>
+<div role="group" aria-label="What are you doing?" style="display: grid; grid-template-columns: 1fr 1fr; border: 2px solid #2B2B2B; border-radius: 12px; overflow: hidden">
+<div aria-current="true" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5px 4px; background: #2B2B2B; color: #FFFFFF"><span style="font-size: 14px; font-weight: 700">Find space</span><span style="font-size: 11px">I have products to send</span></div>
+<div title="Not live in this prototype" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5px 4px; border-left: 2px solid #2B2B2B; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)"><span style="font-size: 14px; font-weight: 700">Offer space</span><span style="font-size: 11px">I have space on my run</span></div>
+</div>
+<div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Trips that pass you on their way.</div>
+<div style="display: flex; align-items: center; gap: 8px">
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; height: 44px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; overflow: hidden"><label for="us4-Search-from" style="flex-shrink: 0; width: 84px; padding-left: 10px; font-size: 15px; font-weight: 700">Pick-up</label><input id="us4-Search-from" type="text" list="p2-Search-place-list" value="Jacksonville (my farm)" autocomplete="off" style="flex: 1; min-width: 0; height: 100%; border: none; outline: none; padding: 0 8px 0 0; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
+<div style="display: flex; align-items: center; height: 44px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; overflow: hidden"><label for="us4-Search-to" style="flex-shrink: 0; width: 84px; padding-left: 10px; font-size: 15px; font-weight: 700">Drop-off</label><input id="us4-Search-to" type="text" list="p2-Search-place-list" value="Medford" autocomplete="off" style="flex: 1; min-width: 0; height: 100%; border: none; outline: none; padding: 0 8px 0 0; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
+</div>
+<button aria-label="Swap From and To" title="Swap, to find return runs and backhauls" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; padding: 0; border: 2px solid #2B2B2B; border-radius: 22px; background: #FFFFFF; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#D73F09" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4v16M4 8l4-4 4 4M16 20V4M12 16l4 4 4-4"></path></svg></button>
+</div>
+
+<div style="display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="us4-Search-when" style="font-size: 15px; font-weight: 700">Date</label><input id="us4-Search-when" type="date" value="2026-11-18" style="height: 44px; min-width: 0; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; padding: 0 8px; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="us4-Search-within" style="font-size: 15px; font-weight: 700">Off route</label><select id="us4-Search-within" style="height: 44px; min-width: 0; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; padding: 0 8px; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"><option value="5" selected>5 mi</option><option value="10">10 mi</option></select></div>
+</div>
+<svg width="342" height="150" viewBox="0 0 342 150" role="img" aria-label="Sketch map of the Applegate Valley: Hwy 238 runs from Grants Pass through Murphy, Provolt and Applegate, then east through Jacksonville to Medford, with I-5 south to Ashland" style="display: block; flex-shrink: 0; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; background: #EFEBDD" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 150V95C40 110 70 125 110 128S200 140 230 150z" fill="#D9DCC4" stroke="none"></path>
+<path d="M40 14C46 40 60 62 84 80S140 108 170 104S220 86 248 70S296 44 330 40" stroke="#8A8A8A" stroke-width="3.5"></path>
+<path d="M330 40C326 70 318 100 312 132" stroke="#8A8A8A" stroke-width="3.5" stroke-dasharray="1 0"></path>
+<circle cx="40" cy="14" r="4" fill="#6E6E6E" stroke="none"></circle>
+<circle cx="62" cy="58" r="3" fill="#6E6E6E" stroke="none"></circle>
+<circle cx="100" cy="88" r="3" fill="#6E6E6E" stroke="none"></circle>
+<circle cx="140" cy="104" r="3.5" fill="#2B2B2B" stroke="none"></circle>
+<path d="M254 84v-8l8-6 8 6v8z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="2"></path>
+<path d="M214 98C214 98 210 94 210 90" stroke="none"></path>
+<circle cx="262" cy="64" r="3" fill="#6E6E6E" stroke="none"></circle>
+<path d="M330 40V22l14 5-14 5" fill="#1A9E2A" stroke="#2B2B2B" stroke-width="2"></path>
+<circle cx="312" cy="132" r="3.5" fill="#6E6E6E" stroke="none"></circle>
+<text x="48" y="16" font-size="10" fill="#4A4A4A" stroke="none" font-family="inherit">Grants Pass</text>
+<text x="68" y="58" font-size="10" fill="#4A4A4A" stroke="none" font-family="inherit">Murphy</text>
+<text x="104" y="84" font-size="10" fill="#4A4A4A" stroke="none" font-family="inherit">Provolt</text>
+<text x="112" y="122" font-size="10" fill="#2B2B2B" stroke="none" font-family="inherit">Applegate</text>
+<text x="214" y="98" font-size="11" font-weight="700" fill="#2B2B2B" stroke="none" font-family="inherit">Jacksonville (you)</text>
+<text x="282" y="20" font-size="11" font-weight="700" fill="#2B2B2B" stroke="none" font-family="inherit">Medford</text>
+<text x="272" y="136" font-size="10" fill="#4A4A4A" stroke="none" font-family="inherit">Ashland</text>
+<text x="168" y="96" font-size="10" fill="#6E6E6E" stroke="none" font-family="inherit">Hwy 238</text>
+<text x="318" y="90" font-size="10" fill="#6E6E6E" stroke="none" font-family="inherit">I-5</text>
+</svg>
+<div style="display: flex; flex-direction: column"><div style="display: flex; justify-content: space-between; font-size: 14px"><span>Cost without sharing:</span><span style="font-weight: 700">about $5</span></div><div style="font-size: 12px; color: #4A4A4A">6 mi one way · IRS rate, 76¢/mi</div></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<label style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; font-size: 15px; font-weight: 700"><input id="us4-fridge" class="p2-fridge" type="checkbox" style="width: 22px; height: 22px; margin: 0; accent-color: #1A9E2A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg>Refrigerated</label>
+<label title="Not live in this prototype" style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; border: 2px solid #6E6E6E; border-radius: 10px; box-sizing: border-box; font-size: 15px; font-weight: 700; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px); cursor: default"><input type="checkbox" disabled style="width: 22px; height: 22px; margin: 0"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#6E6E6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M5 20c0-9 6-15 15-15 0 9-6 15-15 15z"></path><path d="M5 20l9-9"></path></svg>Organic</label>
+</div>
+<div style="font-size: 13px; font-weight: 700; color: #4A3200; text-align: center">*All final terms are up to the farmers' mutual agreement. AgRoutes plays no role.</div>
+<a href="#us4-Results" style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-shrink: 0; height: 52px; margin-top: auto; border: 2px solid #2B2B2B; border-radius: 26px; box-sizing: border-box; background-color: #1A9E2A; color: #FFFFFF; font-size: 19px; font-weight: 700; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>Show trips</a>
+</div>
+<nav aria-label="Main" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid #2B2B2B; padding: 4px 8px 10px">
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Home</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; color: #D73F09; font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px">Trips</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Messages</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Profile</a>
+</nav>
+</div>
+</section>
+<section class="screen" id="us4-Results" hidden>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; color: #2B2B2B; font-family: 'Balsamiq Sans', 'Comic Sans MS', sans-serif">
+<div style="flex: 1; min-height: 0; padding: 8px 24px 8px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto">
+<div style="display: grid; grid-template-columns: 80px 1fr 80px; align-items: center; min-height: 44px">
+<a href="#us4-Search" style="display: flex; align-items: center; min-height: 44px; font-size: 16px">‹ Search</a>
+<div style="font-size: 30px; font-weight: 700; text-align: center">AgRoutes</div>
+<div style="position: relative; display: flex; justify-content: flex-end">
+<a href="#" aria-label="Your profile" style="display: block; width: 44px; height: 44px; border: 2px solid #2B2B2B; border-radius: 22px; box-sizing: border-box; overflow: hidden"><img src="" data-farm alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 35% 70%"></a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h1 style="margin: -2px 0 0; font-size: 20px; font-weight: 700; line-height: 1.2">Trips to Medford</h1>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="p2-sub" style="font-size: 14px; color: #4A4A4A">Jacksonville → Medford · Wed, Nov 18 · within <span class=p2-range4>5</span> mi of the route · <span class=p2-count>7 trips</span></div><a href="#us4-Search" style="font-size: 14px">Edit</a></div>
+</div>
+<div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Trips that pass you on their way. Orange = your part of their run.</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div class="p2-card" data-fridge="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 12 trips</div></div>
+<div style="font-size: 16px; font-weight: 700">Cedar Hill Farm</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>Wed, Nov 18 · 8 AM · Pallet space</span></div>
+<div style="position: relative; height: 40px; margin: 2px 4px 0">
+<div style="position: absolute; left: 0%; width: 100%; top: 0; font-size: 11px; font-weight: 700; color: #D73F09; text-align: center; white-space: nowrap">your leg</div>
+<div style="position: absolute; left: 0; right: 0; top: 18px; height: 3px; background: #BDBDBD"></div>
+<div style="position: absolute; left: 0%; width: 100%; top: 16px; height: 7px; border-radius: 4px; background: #D73F09"></div>
+<div style="position: absolute; left: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; right: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; left: 0; top: 27px; font-size: 11px; color: #4A4A4A">Jacksonville</div>
+<div style="position: absolute; right: 0; top: 27px; font-size: 11px; color: #4A4A4A">Medford</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Starts at your pick-up</div><div style="font-size: 13px; color: #4A4A4A">Your leg: all 6 mi of their run</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Shared costs</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi off their route, at mile 0</li><li style="margin: 2px 0">Drop-off: 0.0 mi off, at mile 6</li><li style="margin: 2px 0">Pick-up comes first → right direction</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 9 trips</div></div>
+<div style="font-size: 16px; font-weight: 700">Woodland Orchard</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>Wed, Nov 18 · 10 AM · A few boxes</span></div>
+<div style="position: relative; height: 40px; margin: 2px 4px 0">
+<div style="position: absolute; left: 0%; width: 100%; top: 0; font-size: 11px; font-weight: 700; color: #D73F09; text-align: center; white-space: nowrap">your leg</div>
+<div style="position: absolute; left: 0; right: 0; top: 18px; height: 3px; background: #BDBDBD"></div>
+<div style="position: absolute; left: 0%; width: 100%; top: 16px; height: 7px; border-radius: 4px; background: #D73F09"></div>
+<div style="position: absolute; left: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; right: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; left: 0; top: 27px; font-size: 11px; color: #4A4A4A">Jacksonville</div>
+<div style="position: absolute; right: 0; top: 27px; font-size: 11px; color: #4A4A4A">Medford</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Starts at your pick-up</div><div style="font-size: 13px; color: #4A4A4A">Your leg: all 6 mi of their run</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Trade a run</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi off their route, at mile 0</li><li style="margin: 2px 0">Drop-off: 0.0 mi off, at mile 6</li><li style="margin: 2px 0">Pick-up comes first → right direction</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 5 trips</div></div>
+<div style="font-size: 16px; font-weight: 700">Upper Applegate Farm</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>Wed, Nov 18 · 7 AM · Half truck free</span></div>
+<div style="position: relative; height: 40px; margin: 2px 4px 0">
+<div style="position: absolute; left: 71%; width: 29%; top: 0; font-size: 11px; font-weight: 700; color: #D73F09; text-align: center; white-space: nowrap">your leg</div>
+<div style="position: absolute; left: 0; right: 0; top: 18px; height: 3px; background: #BDBDBD"></div>
+<div style="position: absolute; left: 71%; width: 29%; top: 16px; height: 7px; border-radius: 4px; background: #D73F09"></div>
+<div style="position: absolute; left: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; right: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; left: 0; top: 27px; font-size: 11px; color: #4A4A4A">Applegate</div>
+<div style="position: absolute; right: 0; top: 27px; font-size: 11px; color: #4A4A4A">Medford</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Passes 0.0 mi from your pick-up</div><div style="font-size: 13px; color: #4A4A4A">Your leg: 6 of their 21 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi off their route, at mile 15</li><li style="margin: 2px 0">Drop-off: 0.0 mi off, at mile 21</li><li style="margin: 2px 0">Pick-up comes first → right direction</li><li style="margin: 2px 0">Same-start check misses it: Applegate is 11 mi from Jacksonville</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 3 trips</div></div>
+<div style="font-size: 16px; font-weight: 700">Sunny Slope Farm</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>Wed, Nov 18 · 9 AM · A few boxes</span></div>
+<div style="position: relative; height: 40px; margin: 2px 4px 0">
+<div style="position: absolute; left: 76%; width: 24%; top: 0; font-size: 11px; font-weight: 700; color: #D73F09; text-align: center; white-space: nowrap">your leg</div>
+<div style="position: absolute; left: 0; right: 0; top: 18px; height: 3px; background: #BDBDBD"></div>
+<div style="position: absolute; left: 76%; width: 24%; top: 16px; height: 7px; border-radius: 4px; background: #D73F09"></div>
+<div style="position: absolute; left: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; right: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; left: 0; top: 27px; font-size: 11px; color: #4A4A4A">Provolt</div>
+<div style="position: absolute; right: 0; top: 27px; font-size: 11px; color: #4A4A4A">Medford</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Passes 0.0 mi from your pick-up</div><div style="font-size: 13px; color: #4A4A4A">Your leg: 6 of their 25 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi off their route, at mile 19</li><li style="margin: 2px 0">Drop-off: 0.0 mi off, at mile 25</li><li style="margin: 2px 0">Pick-up comes first → right direction</li><li style="margin: 2px 0">Same-start check misses it: Provolt is 14 mi from Jacksonville</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 4 trips</div></div>
+<div style="font-size: 16px; font-weight: 700">Panther Gulch Farm</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>Wed, Nov 18 · 6 AM · Pallet space</span></div>
+<div style="position: relative; height: 40px; margin: 2px 4px 0">
+<div style="position: absolute; left: 81%; width: 19%; top: 0; font-size: 11px; font-weight: 700; color: #D73F09; text-align: center; white-space: nowrap">your leg</div>
+<div style="position: absolute; left: 0; right: 0; top: 18px; height: 3px; background: #BDBDBD"></div>
+<div style="position: absolute; left: 81%; width: 19%; top: 16px; height: 7px; border-radius: 4px; background: #D73F09"></div>
+<div style="position: absolute; left: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; right: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; left: 0; top: 27px; font-size: 11px; color: #4A4A4A">Williams</div>
+<div style="position: absolute; right: 0; top: 27px; font-size: 11px; color: #4A4A4A">Medford</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Passes 0.0 mi from your pick-up</div><div style="font-size: 13px; color: #4A4A4A">Your leg: 6 of their 31 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi off their route, at mile 25</li><li style="margin: 2px 0">Drop-off: 0.0 mi off, at mile 31</li><li style="margin: 2px 0">Pick-up comes first → right direction</li><li style="margin: 2px 0">Same-start check misses it: Williams is 16 mi from Jacksonville</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="yes" data-reach="0.9" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 7 trips</div></div>
+<div style="font-size: 16px; font-weight: 700">Little Applegate Farm</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>Wed, Nov 18 · 7 AM · Half truck free</span></div>
+<div style="position: relative; height: 40px; margin: 2px 4px 0">
+<div style="position: absolute; left: 46%; width: 15%; top: 0; font-size: 11px; font-weight: 700; color: #D73F09; text-align: center; white-space: nowrap">your leg</div>
+<div style="position: absolute; left: 0; right: 0; top: 18px; height: 3px; background: #BDBDBD"></div>
+<div style="position: absolute; left: 46%; width: 15%; top: 16px; height: 7px; border-radius: 4px; background: #D73F09"></div>
+<div style="position: absolute; left: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; right: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; left: 0; top: 27px; font-size: 11px; color: #4A4A4A">Applegate</div>
+<div style="position: absolute; right: 0; top: 27px; font-size: 11px; color: #4A4A4A">Ashland</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Passes 0.0 mi from your pick-up</div><div style="font-size: 13px; color: #4A4A4A">Your leg: 5 of their 34 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 0.0 mi off their route, at mile 16</li><li style="margin: 2px 0">Drop-off: 0.9 mi off, at mile 21</li><li style="margin: 2px 0">Pick-up comes first → right direction</li><li style="margin: 2px 0">Same-start check would miss it: Applegate is 11 mi from Jacksonville, Ashland 12 mi from Medford</li></ul>
+</details>
+</div>
+<div class="p2-card" data-fridge="no" data-reach="4.6" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Close call</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 6 trips</div></div>
+<div style="font-size: 16px; font-weight: 700">Rogue Bend Farm</div>
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>Wed, Nov 18 · 11 AM · Half truck free</span></div>
+<div style="position: relative; height: 40px; margin: 2px 4px 0">
+<div style="position: absolute; left: 62%; width: 38%; top: 0; font-size: 11px; font-weight: 700; color: #D73F09; text-align: center; white-space: nowrap">your leg</div>
+<div style="position: absolute; left: 0; right: 0; top: 18px; height: 3px; background: #BDBDBD"></div>
+<div style="position: absolute; left: 62%; width: 38%; top: 16px; height: 7px; border-radius: 4px; background: #D73F09"></div>
+<div style="position: absolute; left: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; right: -5px; top: 14px; width: 10px; height: 10px; border-radius: 5px; background: #FFFFFF; border: 2px solid #6E6E6E; box-sizing: border-box"></div>
+<div style="position: absolute; left: 0; top: 27px; font-size: 11px; color: #4A4A4A">Gold Hill</div>
+<div style="position: absolute; right: 0; top: 27px; font-size: 11px; color: #4A4A4A">Medford</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
+<div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Passes 4.6 mi from your pick-up</div><div style="font-size: 13px; color: #4A4A4A">Your leg: 6 of their 16 mi</div></div>
+<div style="flex-shrink: 0; padding: 2px 8px; border: 2px solid #2B2B2B; border-radius: 12px; font-size: 12px; font-weight: 700">Share or trade</div>
+</div>
+<details style="border-top: 1px dashed #6E6E6E; padding-top: 6px">
+<summary style="cursor: pointer; font-size: 13px; font-weight: 700; color: #D73F09">How this was matched</summary>
+<ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up: 4.6 mi off their route (I-5 at Central Point), at mile 10</li><li style="margin: 2px 0">Drop-off: 0.0 mi off, at mile 16</li><li style="margin: 2px 0">Pick-up comes first → right direction</li><li style="margin: 2px 0">Close call: 4.6 mi off their route. The farmer decides.</li></ul>
+</details>
+</div>
+<div class="p2-empty" hidden style="padding: 14px 12px; border: 2px dashed #6E6E6E; border-radius: 12px; font-size: 14px; line-height: 1.4; color: #4A4A4A; text-align: center">No refrigerated trips pass near your pick-up and drop-off.</div>
+</div>
+<div style="margin-top: auto; font-size: 12px; color: #4A4A4A; text-align: center">Along the route.</div>
+</div>
+<nav aria-label="Main" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid #2B2B2B; padding: 4px 8px 10px">
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Home</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; color: #D73F09; font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px">Trips</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Messages</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; font-size: 15px; text-decoration: none; color: #2B2B2B">Profile</a>
+</nav>
+</div>
+</section>
+</div>
+<div class="bar"><a href="#start">↺ All stories</a><a href="#s1-Main">User Story 1</a><a href="#s2-Main">User Story 2</a><a href="#us3-Search">User Story 3</a><a href="#us4-Search">User Story 4</a></div>
 </div>
 <script>
 const FARM="data:image/jpeg;base64,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";
@@ -2047,5 +2457,28 @@ const sw=e.target.closest('button[aria-label="Swap From and To"]');if(sw){const 
 const eye=e.target.closest('button[aria-label="Show password"],button[aria-label="Hide password"]');if(eye){const i=eye.closest('.screen').querySelector('input[autocomplete="current-password"],input[type="password"],input[id$="-pw"]');if(i){i.type=i.type==='password'?'text':'password';eye.setAttribute('aria-label',i.type==='password'?'Show password':'Hide password');}}
 const bell=e.target.closest('button[aria-pressed]');if(bell){e.preventDefault();}
 });
+</script>
+<script>
+(function(){
+  var pairs={'us3-Results':'us3-fridge','us4-Results':'us4-fridge'};
+  function p2filter(){
+    var sel=document.getElementById('us3-Search-within'); var range=sel?parseFloat(sel.value):5;
+    var rs=document.querySelectorAll('#us3-Results .p2-range'); rs.forEach(function(r){ r.textContent=range; });
+    var sel4=document.getElementById('us4-Search-within'); var range4=sel4?parseFloat(sel4.value):5;
+    document.querySelectorAll('#us4-Results .p2-range4').forEach(function(r){ r.textContent=range4; });
+    Object.keys(pairs).forEach(function(id){
+      var box=document.getElementById(pairs[id]); var only=box&&box.checked;
+      var sec=document.getElementById(id); if(!sec) return;
+      var n=0; sec.querySelectorAll('.p2-card').forEach(function(c){
+        var lim = id==='us3-Results' ? range : range4;
+        var show=(!only||c.dataset.fridge==='yes') && parseFloat(c.dataset.reach||0)<=lim;
+        c.hidden=!show; c.style.display=show?'flex':'none'; if(show) n++; });
+      var cnt=sec.querySelector('.p2-count'); if(cnt) cnt.textContent=(n===1?'1 trip':n+' trips')+(only?' · refrigerated':'');
+      var e=sec.querySelector('.p2-empty'); if(e) e.hidden=(n>0);
+    });
+  }
+  document.addEventListener('change',function(e){ if(e.target&&((e.target.classList&&e.target.classList.contains('p2-fridge'))||e.target.id==='us3-Search-within'||e.target.id==='us4-Search-within')) p2filter(); });
+  addEventListener('hashchange',p2filter); p2filter();
+})();
 </script>
 </body></html>
