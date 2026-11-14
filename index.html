@@ -23,6 +23,7 @@ a{color:#D73F09;font-weight:700}a:hover{color:#A8320A}
 .storycard{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border:2px solid #2B2B2B;border-radius:14px;color:#2B2B2B!important;font-weight:400!important;text-decoration:none}
 .storycard b{font-size:17px} .storycard span{font-size:14px;line-height:1.4;color:#4A4A4A} .storycard em{font-style:normal;color:#D73F09;font-weight:700;font-size:15px;text-decoration:underline}
 .storycard:hover{background:#F5F2EA}
+.screen [style*="overflow-y: auto"]>*{flex-shrink:0}
 .legend{margin-top:auto;font-size:13px;color:#4A4A4A;display:flex;gap:8px;align-items:center}
 .hatch{display:inline-block;width:28px;height:16px;border:2px solid #6E6E6E;border-radius:8px;background:repeating-linear-gradient(35deg,#fff 0 4px,#ddd 4px 6px)}
 @media (max-width:430px){.wrap{padding:0;justify-content:flex-start}.phone{border:none;border-radius:0;box-shadow:none;width:100vw;height:auto;min-height:100vh}.screen{width:100vw;height:auto;min-height:100vh}.screen>div{width:100%!important}.bar{padding:8px}}
@@ -2052,7 +2053,7 @@ Show trips</a>
 <div title="Not live in this prototype" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5px 4px; border-left: 2px solid #2B2B2B; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)"><span style="font-size: 14px; font-weight: 700">Find space</span><span style="font-size: 11px">I have products to send</span></div>
 </div>
 <div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Products that start and end near your run’s start and end.</div>
-<div role="group" aria-label="Look for products" style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">Look for products</span><div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border: 2px solid #2B2B2B; border-radius: 10px; overflow: hidden; font-size: 13px; font-weight: 700; text-align: center"><div title="Not live in this prototype" style="padding: 8px 2px; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)">On the way there</div><div title="Not live in this prototype" style="padding: 8px 2px; border-left: 2px solid #2B2B2B; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)">On the way back</div><div aria-current="true" style="padding: 8px 2px; border-left: 2px solid #2B2B2B; background: #2B2B2B; color: #FFFFFF">Both</div></div></div>
+<div role="group" aria-label="Look for products" style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">Look for products</span><div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border: 2px solid #2B2B2B; border-radius: 10px; overflow: hidden; font-size: 13px; font-weight: 700; text-align: center"><button type="button" class="p2-way" data-way="there" style="padding: 8px 2px; border: none; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; background: #FFFFFF; color: #2B2B2B">On the way there</button><button type="button" class="p2-way" data-way="back" style="padding: 8px 2px; border: none; border-left: 2px solid #2B2B2B; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; background: #FFFFFF; color: #2B2B2B">On the way back</button><button type="button" class="p2-way" data-way="both" style="padding: 8px 2px; border: none; border-left: 2px solid #2B2B2B; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; background: #2B2B2B; color: #FFFFFF">Both</button></div></div>
 <div style="display: flex; align-items: center; gap: 8px">
 <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px">
 <div style="display: flex; align-items: center; height: 44px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; overflow: hidden"><label for="us3-Search-from" style="flex-shrink: 0; width: 52px; padding-left: 10px; font-size: 15px; font-weight: 700">From</label><input id="us3-Search-from" type="text" list="p2-Search-place-list" value="Applegate (my farm)" autocomplete="off" style="flex: 1; min-width: 0; height: 100%; border: none; outline: none; padding: 0 8px 0 0; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
@@ -2104,13 +2105,13 @@ Show trips</a>
 </div>
 <div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Products that start and end near your run’s start and end.</div>
 <div style="display: flex; flex-direction: column; gap: 10px">
-<div style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way there</div>
-<div class="p2-card" data-cold="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-group" data-leg="there" style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way there</div>
+<div class="p2-card" data-leg="there" data-pp="Applegate" data-po="0" data-dp="Medford" data-do="35" data-ready="390" data-by="600" data-cold="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 12 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Cedar Hill Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>4 crates of greens</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 6:30 AM · deliver by 10 AM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you leave Applegate at 7 AM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Applegate → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as your run</div><div style="font-size: 13px; color: #4A4A4A">Rides all 21 mi</div></div>
@@ -2121,12 +2122,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Starts in Applegate, same as your run</li><li style="margin: 2px 0">Ends in Medford, same as your run</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Applegate" data-po="0" data-dp="Medford" data-do="35" data-ready="480" data-by="720" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 9 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Woodland Orchard</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>6 boxes of apples</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 8 AM · deliver by noon</div>
-<div style="padding: 4px 8px; border-radius: 8px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; color: #4A3200"><b>Outside your time window · same day</b><br>Ready at 8 AM, after you leave Applegate at 7 AM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Applegate → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as your run</div><div style="font-size: 13px; color: #4A4A4A">Rides all 21 mi</div></div>
@@ -2137,12 +2138,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Starts in Applegate, same as your run</li><li style="margin: 2px 0">Ends in Medford, same as your run</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="7" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Ruch" data-po="10" data-dp="Medford" data-do="35" data-ready="420" data-by="660" data-cold="no" data-reach="7" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 5 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Sun Hollow Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>3 crates of squash</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 7 AM · deliver by 11 AM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you pass Ruch (about 7:10 AM)</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Ruch → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Starts 7 mi from your start</div><div style="font-size: 13px; color: #4A4A4A">Ends in Medford, same as your run</div></div>
@@ -2153,13 +2154,13 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Starts in Ruch, 7 mi from your start</li><li style="margin: 2px 0">Ends in Medford, same as your run</li><li style="margin: 2px 0">Shows up only with a 10 mi buffer</li><li style="margin: 2px 0">This search can’t tell that Ruch is right on your way</li></ul>
 </details>
 </div>
-<div style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way back</div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-group" data-leg="back" style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way back</div>
+<div class="p2-card" data-leg="back" data-pp="Medford" data-po="0" data-dp="Applegate" data-do="35" data-ready="780" data-by="1020" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 31 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Rogue Valley Food Hub</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>10 sacks of seed potatoes</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 1 PM · deliver by 5 PM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you head back at 2 PM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Medford → Applegate</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as your trip home</div><div style="font-size: 13px; color: #4A4A4A">Rides all 21 mi back</div></div>
@@ -2197,7 +2198,7 @@ Show trips</a>
 <div title="Not live in this prototype" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5px 4px; border-left: 2px solid #2B2B2B; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)"><span style="font-size: 14px; font-weight: 700">Find space</span><span style="font-size: 11px">I have products to send</span></div>
 </div>
 <div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Products you can pick up and drop off along your route.</div>
-<div role="group" aria-label="Look for products" style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">Look for products</span><div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border: 2px solid #2B2B2B; border-radius: 10px; overflow: hidden; font-size: 13px; font-weight: 700; text-align: center"><div title="Not live in this prototype" style="padding: 8px 2px; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)">On the way there</div><div title="Not live in this prototype" style="padding: 8px 2px; border-left: 2px solid #2B2B2B; color: #6E6E6E; background: repeating-linear-gradient(35deg, #FFFFFF 0 4px, #DDDDDD 4px 6px)">On the way back</div><div aria-current="true" style="padding: 8px 2px; border-left: 2px solid #2B2B2B; background: #2B2B2B; color: #FFFFFF">Both</div></div></div>
+<div role="group" aria-label="Look for products" style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">Look for products</span><div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border: 2px solid #2B2B2B; border-radius: 10px; overflow: hidden; font-size: 13px; font-weight: 700; text-align: center"><button type="button" class="p2-way" data-way="there" style="padding: 8px 2px; border: none; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; background: #FFFFFF; color: #2B2B2B">On the way there</button><button type="button" class="p2-way" data-way="back" style="padding: 8px 2px; border: none; border-left: 2px solid #2B2B2B; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; background: #FFFFFF; color: #2B2B2B">On the way back</button><button type="button" class="p2-way" data-way="both" style="padding: 8px 2px; border: none; border-left: 2px solid #2B2B2B; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; background: #2B2B2B; color: #FFFFFF">Both</button></div></div>
 <div style="display: flex; align-items: center; gap: 8px">
 <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px">
 <div style="display: flex; align-items: center; height: 44px; border: 2px solid #2B2B2B; border-radius: 10px; box-sizing: border-box; overflow: hidden"><label for="us4-Search-from" style="flex-shrink: 0; width: 52px; padding-left: 10px; font-size: 15px; font-weight: 700">From</label><input id="us4-Search-from" type="text" list="p2-Search-place-list" value="Applegate (my farm)" autocomplete="off" style="flex: 1; min-width: 0; height: 100%; border: none; outline: none; padding: 0 8px 0 0; font-family: inherit; font-size: 16px; color: #2B2B2B; background: #FFFFFF"></div>
@@ -2226,7 +2227,7 @@ Show trips</a>
 <path d="M214 98C214 98 210 94 210 90" stroke="none"></path>
 <circle cx="262" cy="64" r="3" fill="#6E6E6E" stroke="none"></circle>
 <circle cx="186" cy="102" r="3" fill="#6E6E6E" stroke="none"></circle>
-<text x="178" y="117" font-size="10" fill="#4A4A4A" stroke="none" font-family="inherit">Ruch</text>
+<text x="178" y="95" font-size="10" fill="#4A4A4A" stroke="none" font-family="inherit">Ruch</text>
 <path d="M330 40V22l14 5-14 5" fill="#1A9E2A" stroke="#2B2B2B" stroke-width="2"></path>
 <circle cx="312" cy="132" r="3.5" fill="#6E6E6E" stroke="none"></circle>
 <text x="48" y="16" font-size="10" fill="#4A4A4A" stroke="none" font-family="inherit">Grants Pass</text>
@@ -2271,13 +2272,13 @@ Show trips</a>
 </div>
 <div style="font-size: 13px; color: #4A4A4A; line-height: 1.35">Products you can pick up and drop off along your route, there and back.</div>
 <div style="display: flex; flex-direction: column; gap: 10px">
-<div style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way there</div>
-<div class="p2-card" data-cold="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-group" data-leg="there" style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way there</div>
+<div class="p2-card" data-leg="there" data-pp="Applegate" data-po="0" data-dp="Medford" data-do="35" data-ready="390" data-by="600" data-cold="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 12 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Cedar Hill Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>4 crates of greens</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 6:30 AM · deliver by 10 AM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you leave Applegate at 7 AM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Applegate → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as your run</div><div style="font-size: 13px; color: #4A4A4A">Rides all 21 mi</div></div>
@@ -2288,12 +2289,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Picks up at the start of your route, in Applegate</li><li style="margin: 2px 0">Drops off at the end, in Medford</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Applegate" data-po="0" data-dp="Medford" data-do="35" data-ready="480" data-by="720" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 9 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Woodland Orchard</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>6 boxes of apples</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 8 AM · deliver by noon</div>
-<div style="padding: 4px 8px; border-radius: 8px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; color: #4A3200"><b>Outside your time window · same day</b><br>Ready at 8 AM, after you leave Applegate at 7 AM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Applegate → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as your run</div><div style="font-size: 13px; color: #4A4A4A">Rides all 21 mi</div></div>
@@ -2304,12 +2305,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Picks up at the start of your route, in Applegate</li><li style="margin: 2px 0">Drops off at the end, in Medford</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Ruch" data-po="10" data-dp="Medford" data-do="35" data-ready="420" data-by="660" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 5 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Sun Hollow Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>3 crates of squash</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 7 AM · deliver by 11 AM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you pass Ruch (about 7:10 AM)</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Ruch → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Pick up in Ruch, on your way</div><div style="font-size: 13px; color: #4A4A4A">Rides 14 of your 21 mi</div></div>
@@ -2320,12 +2321,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up in Ruch is on your route</li><li style="margin: 2px 0">Drop-off in Medford is on your route, after the pick-up</li><li style="margin: 2px 0">Endpoint matching misses it: Ruch is 7 mi from your start</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Jacksonville" data-po="25" data-dp="Medford" data-do="35" data-ready="360" data-by="540" data-cold="yes" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 7 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Bramble Lane Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Refrigerated" fill="none" stroke="#1F5E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7L3.3 17"></path><path d="M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3 10.5l3.6-1.3-.6-3.7M21 13.5l-3.6 1.3.6 3.7M3 13.5l3.6 1.3-.6 3.7M21 10.5l-3.6-1.3.6-3.7"></path></svg><span>10 dozen eggs</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 6 AM · deliver by 9 AM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you pass Jacksonville (about 7:25 AM)</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Jacksonville → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Pick up in Jacksonville, on your way</div><div style="font-size: 13px; color: #4A4A4A">Rides the last 6 of your 21 mi</div></div>
@@ -2336,12 +2337,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up in Jacksonville is on your route</li><li style="margin: 2px 0">Drop-off in Medford is on your route, after the pick-up</li><li style="margin: 2px 0">Endpoint matching misses it: Jacksonville is 15 mi from your start</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Applegate" data-po="0" data-dp="Jacksonville" data-do="25" data-ready="405" data-by="720" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 4 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Pine Gulch Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>2 pallets of hay</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 6:45 AM · deliver by noon</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you leave Applegate at 7 AM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Applegate → Jacksonville</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Drop off in Jacksonville, on your way</div><div style="font-size: 13px; color: #4A4A4A">Rides the first 15 of your 21 mi</div></div>
@@ -2352,12 +2353,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up in Applegate is on your route</li><li style="margin: 2px 0">Drop-off in Jacksonville is on your route, after the pick-up</li><li style="margin: 2px 0">Endpoint matching misses it: Jacksonville is 6 mi from your end</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Ruch" data-po="10" data-dp="Jacksonville" data-do="25" data-ready="540" data-by="780" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 3 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Star Ranch</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>5 sacks of seed garlic</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 9 AM · deliver by 1 PM</div>
-<div style="padding: 4px 8px; border-radius: 8px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; color: #4A3200"><b>Outside your time window · same day</b><br>Ready at 9 AM, after you pass Ruch (about 7:10 AM)</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Ruch → Jacksonville</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Pick up in Ruch, drop off in Jacksonville</div><div style="font-size: 13px; color: #4A4A4A">Rides 8 mi in the middle of your run</div></div>
@@ -2368,12 +2369,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up in Ruch is on your route</li><li style="margin: 2px 0">Drop-off in Jacksonville is on your route, after the pick-up</li><li style="margin: 2px 0">Endpoint matching misses it: neither stop is near your start or end</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="there" data-pp="Central Point" data-po="40" data-dp="Medford" data-do="50" data-ready="420" data-by="600" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Close call</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 6 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Rogue Bend Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>4 crates of pears</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 7 AM · deliver by 10 AM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you’d reach Central Point (about 7:40 AM)</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Central Point → Medford</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Pick up 4.6 mi off your route</div><div style="font-size: 13px; color: #4A4A4A">A short detour to Central Point, then on to Medford</div></div>
@@ -2384,13 +2385,13 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up in Central Point is 4.6 mi off your route</li><li style="margin: 2px 0">Drop-off in Medford is on your route, after the pick-up</li><li style="margin: 2px 0">Close to the 5 mi buffer. You decide if the detour is worth it.</li></ul>
 </details>
 </div>
-<div style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way back</div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-group" data-leg="back" style="font-size: 15px; font-weight: 700; margin-top: 4px">On the way back</div>
+<div class="p2-card" data-leg="back" data-pp="Medford" data-po="0" data-dp="Applegate" data-do="35" data-ready="780" data-by="1020" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 31 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Rogue Valley Food Hub</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>10 sacks of seed potatoes</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 1 PM · deliver by 5 PM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you head back at 2 PM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Medford → Applegate</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Same start and end as your trip home</div><div style="font-size: 13px; color: #4A4A4A">Rides all 21 mi back</div></div>
@@ -2401,12 +2402,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Picks up where your run ends, in Medford</li><li style="margin: 2px 0">Drops off back at your farm, in Applegate</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="back" data-pp="Medford" data-po="0" data-dp="Jacksonville" data-do="10" data-ready="900" data-by="1080" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 8 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Hilltop Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>20 empty crates</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready 3 PM · deliver by 6 PM</div>
-<div style="padding: 4px 8px; border-radius: 8px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; color: #4A3200"><b>Outside your time window · same day</b><br>Ready at 3 PM, after you head back at 2 PM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Medford → Jacksonville</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Drop off in Jacksonville, on your way home</div><div style="font-size: 13px; color: #4A4A4A">Rides the first 6 mi home</div></div>
@@ -2417,12 +2418,12 @@ Show trips</a>
 <ul style="margin: 6px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.35; color: #2B2B2B"><li style="margin: 2px 0">Pick-up in Medford is on your route home</li><li style="margin: 2px 0">Drop-off in Jacksonville is on your route home, after the pick-up</li><li style="margin: 2px 0">Endpoint matching misses it: Jacksonville is 15 mi from your farm</li></ul>
 </details>
 </div>
-<div class="p2-card" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
+<div class="p2-card" data-leg="back" data-pp="Medford" data-po="0" data-dp="Ruch" data-do="25" data-ready="720" data-by="960" data-cold="no" data-reach="0" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border: 2px solid #2B2B2B; border-radius: 12px">
 <div style="display: flex; align-items: center; gap: 6px"><div style="align-self: flex-start; padding: 2px 8px; border-radius: 10px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; font-weight: 700; color: #4A3200">Along the route</div><div style="flex: 1"></div><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Verified" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="Insured" fill="none" stroke="#8A4B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 14l2 2 4-4"></path></svg><div style="font-size: 12px; color: #4A4A4A">· 7 runs done</div></div>
 <div style="font-size: 16px; font-weight: 700">Little Applegate Farm</div>
 <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4A4A4A"><span>3 rolls of fencing</span></div>
 <div style="font-size: 13px; color: #2B2B2B">Ready noon · deliver by 4 PM</div>
-<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before you head back at 2 PM</div>
+<div class="p2-fit"></div>
 <div style="font-size: 15px; margin-top: 2px">Medford → Ruch</div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 8px">
 <div style="display: flex; flex-direction: column"><div style="font-size: 14px; font-weight: 700">Drop off in Ruch, on your way home</div><div style="font-size: 13px; color: #4A4A4A">Rides 14 of 21 mi home</div></div>
@@ -2472,14 +2473,41 @@ const bell=e.target.closest('button[aria-pressed]');if(bell){e.preventDefault();
       var sec=document.getElementById(id); if(!sec) return;
       var n=0; sec.querySelectorAll('.p2-card').forEach(function(c){
         var lim = id==='us3-Results' ? range : range4;
-        var show=(cold||c.dataset.cold!=='yes') && parseFloat(c.dataset.reach||0)<=lim;
+        var way=(window.p2way||{})[id.slice(0,3)]||'both'; var show=(cold||c.dataset.cold!=='yes') && parseFloat(c.dataset.reach||0)<=lim && (way==='both'||c.dataset.leg===way);
         c.hidden=!show; c.style.display=show?'flex':'none'; if(show) n++; });
       var cnt=sec.querySelector('.p2-count'); if(cnt) cnt.textContent=(n===1?'1 farm':n+' farms')+(cold?'':' · no cold items');
-      var e=sec.querySelector('.p2-empty'); if(e) e.hidden=(n>0);
+      var e=sec.querySelector('.p2-empty'); if(e) e.hidden=(n>0); var w2=(window.p2way||{})[id.slice(0,3)]||'both'; sec.querySelectorAll('.p2-group').forEach(function(g){g.style.display=(w2==='both'||g.dataset.leg===w2)?'':'none';});
     });
   }
   document.addEventListener('change',function(e){ if(e.target&&((e.target.classList&&e.target.classList.contains('p2-fridge'))||e.target.id==='us3-Search-within'||e.target.id==='us4-Search-within')) p2filter(); });
   addEventListener('hashchange',p2filter); p2filter();
+  window.p2way={us3:'both',us4:'both'};
+  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.p2-way'); if(!b) return;
+    var sec=b.closest('.screen'); var key=sec.id.slice(0,3); window.p2way[key]=b.dataset.way;
+    sec.querySelectorAll('.p2-way').forEach(function(x){var on=x===b; x.style.background=on?'#2B2B2B':'#FFFFFF'; x.style.color=on?'#FFFFFF':'#2B2B2B'; x.setAttribute('aria-pressed',on);});
+    p2filter();});
 })();
 </script>
-</body></html>
+<script>
+(function(){
+  function fmt(m){m=((m%1440)+1440)%1440;var hh=Math.floor(m/60),mm=m%60,ap=hh>=12?'PM':'AM';hh=hh%12||12;return hh+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap;}
+  function val(id,d){var el=document.getElementById(id);if(!el||!el.value)return d;var a=el.value.split(':');return (+a[0])*60+(+a[1]);}
+  function render(){
+    [['us3',''],['us4','']].forEach(function(x){
+      var p=x[0],leave=val(p+'-leave',420),back=val(p+'-back',840);
+      document.querySelectorAll('#'+p+'-Results .p2-card').forEach(function(c){
+        var d=c.dataset,start=d.leg==='back'?back:leave,po=+d.po,pass=start+po,arrive=start+(+d.do),ready=+d.ready,by=+d.by;
+        var where=po===0?(d.leg==='back'?'you head back from '+d.pp+' at '+fmt(pass):'you leave '+d.pp+' at '+fmt(pass)):(d.pp==='Central Point'?'you’d reach Central Point (about '+fmt(pass)+')':'you pass '+d.pp+' (about '+fmt(pass)+')');
+        var bad=null;
+        if(ready>pass) bad='Ready at '+fmt(ready)+', after '+where;
+        else if(arrive>by) bad='You’d reach '+d.dp+' about '+fmt(arrive)+', after their '+fmt(by)+' deadline';
+        var f=c.querySelector('.p2-fit');
+        f.innerHTML=bad?'<div style="padding: 4px 8px; border-radius: 8px; background: #FFF1D6; border: 2px solid #8A4B00; font-size: 12px; color: #4A3200"><b>Outside your time window · same day</b><br>'+bad+'</div>'
+                       :'<div style="font-size: 12px; font-weight: 700; color: #1A7A22">✓ Ready before '+where+'</div>';
+      });
+    });
+  }
+  document.addEventListener('change',function(e){if(e.target&&/-(leave|back)$/.test(e.target.id))render();});
+  addEventListener('hashchange',render); render();
+})();
+</script></body></html>
